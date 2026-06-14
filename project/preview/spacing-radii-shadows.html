@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Radii & shadows" subtitle="Square-leaning radii, paper shadows" viewport="700x180" -->
+<html lang="en"><head>
+<meta charset="utf-8" /><title>Radii & shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;background:var(--bg-paper);}
+  .card{padding:24px 28px;font-family:var(--font-body);display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end;}
+  .s{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .sq{width:70px;height:70px;background:var(--sable-patine);border:1px solid var(--border-soft);}
+  .l{font-family:var(--font-mono);font-size:10px;color:var(--fg-3);}
+  .n{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-1);font-weight:500;}
+</style></head>
+<body>
+<div class="card">
+  <div class="s"><div class="sq" style="border-radius:0"></div><div class="n">None</div><div class="l">0</div></div>
+  <div class="s"><div class="sq" style="border-radius:2px"></div><div class="n">Sm</div><div class="l">2px</div></div>
+  <div class="s"><div class="sq" style="border-radius:4px"></div><div class="n">Md</div><div class="l">4px</div></div>
+  <div class="s"><div class="sq" style="border-radius:8px"></div><div class="n">Lg</div><div class="l">8px</div></div>
+  <div class="s"><div class="sq" style="border-radius:999px"></div><div class="n">Pill</div><div class="l">999px</div></div>
+  <div class="s"><div class="sq" style="background:#FDFBF6;box-shadow:0 1px 2px rgba(0,0,0,0.04),0 8px 24px -8px rgba(87,81,70,0.18);border:0"></div><div class="n">Card</div><div class="l">shadow-card</div></div>
+  <div class="s"><div class="sq" style="background:#FDFBF6;box-shadow:0 2px 8px rgba(0,0,0,0.06),0 24px 48px -12px rgba(87,81,70,0.28);border:0"></div><div class="n">Float</div><div class="l">shadow-float</div></div>
+  <div class="s"><div class="sq" style="background:#FDFBF6;box-shadow:inset 0 0 0 1px rgba(87,81,70,0.14);border:0"></div><div class="n">Inset</div><div class="l">shadow-inset</div></div>
+  <div class="s"><div class="sq" style="background:transparent;border-top:1px solid #000;border-left:0;border-right:0;border-bottom:0;height:2px;width:70px;align-self:center;"></div><div class="n">Rule</div><div class="l">1px / charbon</div></div>
+  <div class="s"><div class="sq" style="background:transparent;border-top:1px solid rgba(87,81,70,0.18);border-left:0;border-right:0;border-bottom:0;height:2px;width:70px;align-self:center;"></div><div class="n">Hairline</div><div class="l">1px / soft</div></div>
+</div>
+</body></html>

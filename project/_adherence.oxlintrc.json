@@ -1,0 +1,213 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "signs/**",
+              "signs/anse-ogilvie/**",
+              "ui_kits/marketing-site/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Gloock|DM Sans|Ibarra Real Nova|Playfair Display))/i]",
+        "message": "Font not provided by the design system. Available: Gloock, DM Sans, Ibarra Real Nova, Playfair Display."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent",
+      "--accent-press",
+      "--accent-sage",
+      "--bg-canvas",
+      "--bg-forest",
+      "--bg-ink",
+      "--bg-paper",
+      "--bg-sand",
+      "--border-hairline",
+      "--border-sand",
+      "--border-soft",
+      "--charbon-profond",
+      "--corten",
+      "--corten-shade-10",
+      "--dur-base",
+      "--dur-quick",
+      "--dur-slow",
+      "--ease-out",
+      "--ease-standard",
+      "--fg-1",
+      "--fg-2",
+      "--fg-3",
+      "--fg-inverse",
+      "--font-body",
+      "--font-display",
+      "--font-mono",
+      "--font-serif-italic",
+      "--forestier-tint-20",
+      "--fs-2xl",
+      "--fs-3xl",
+      "--fs-4xl",
+      "--fs-5xl",
+      "--fs-6xl",
+      "--fs-base",
+      "--fs-lg",
+      "--fs-md",
+      "--fs-sm",
+      "--fs-xl",
+      "--fs-xs",
+      "--gris-forestier",
+      "--lh-body",
+      "--lh-display",
+      "--lh-heading",
+      "--lh-tight",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-none",
+      "--radius-pill",
+      "--radius-sm",
+      "--rule",
+      "--sable-patine",
+      "--sable-shade-10",
+      "--sable-tint-10",
+      "--sable-tint-30",
+      "--sauge-collines",
+      "--sauge-shade-10",
+      "--shadow-card",
+      "--shadow-float",
+      "--shadow-inset",
+      "--space-1",
+      "--space-10",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--tracking-eyebrow",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--tracking-wide"
+    ],
+    "tokenKinds": {
+      "--charbon-profond": "color",
+      "--sable-patine": "color",
+      "--corten": "color",
+      "--sauge-collines": "color",
+      "--gris-forestier": "color",
+      "--sable-tint-10": "color",
+      "--sable-tint-30": "color",
+      "--sable-shade-10": "color",
+      "--corten-shade-10": "color",
+      "--sauge-shade-10": "color",
+      "--forestier-tint-20": "color",
+      "--fg-1": "color",
+      "--fg-2": "color",
+      "--fg-3": "color",
+      "--fg-inverse": "color",
+      "--bg-paper": "color",
+      "--bg-canvas": "color",
+      "--bg-sand": "color",
+      "--bg-ink": "color",
+      "--bg-forest": "color",
+      "--accent": "color",
+      "--accent-press": "color",
+      "--accent-sage": "color",
+      "--border-hairline": "color",
+      "--border-soft": "color",
+      "--border-sand": "color",
+      "--rule": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-serif-italic": "font",
+      "--font-mono": "font",
+      "--fs-xs": "spacing",
+      "--fs-sm": "spacing",
+      "--fs-base": "spacing",
+      "--fs-md": "spacing",
+      "--fs-lg": "spacing",
+      "--fs-xl": "spacing",
+      "--fs-2xl": "spacing",
+      "--fs-3xl": "spacing",
+      "--fs-4xl": "spacing",
+      "--fs-5xl": "spacing",
+      "--fs-6xl": "spacing",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--tracking-wide": "font",
+      "--tracking-eyebrow": "font",
+      "--lh-display": "other",
+      "--lh-heading": "other",
+      "--lh-body": "other",
+      "--lh-tight": "other",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--radius-none": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-pill": "radius",
+      "--shadow-card": "shadow",
+      "--shadow-float": "shadow",
+      "--shadow-inset": "shadow",
+      "--ease-standard": "other",
+      "--ease-out": "other",
+      "--dur-quick": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "DM Sans",
+      "Gloock",
+      "Ibarra Real Nova",
+      "Playfair Display"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Pancarte A — plein écran" subtitle="Variante sobre · vue plein écran" -->
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>OGILVIE — Pancarte Variante A (sobre) plein écran</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;padding:0;background:#2a2620;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;}
+  .stage{padding:40px;display:flex;flex-direction:column;align-items:center;gap:16px;}
+  .board{transform-origin:center;box-shadow:0 30px 80px rgba(0,0,0,0.5);}
+  .legend{color:rgba(255,255,255,0.6);font-size:12px;letter-spacing:.18em;text-transform:uppercase;}
+  .ctrl{display:flex;gap:8px;align-items:center;}
+  .ctrl button{background:transparent;border:1px solid rgba(255,255,255,0.4);color:#fff;padding:6px 12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-family:inherit;}
+  .ctrl button:hover{background:rgba(255,255,255,0.1);}
+  .ctrl a{color:rgba(255,255,255,0.6);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="Signs.jsx"></script>
+<script type="text/babel">
+  // Signs.jsx only auto-mounts when DesignCanvas is present — we skip that here.
+  const reactRoot = ReactDOM.createRoot(document.getElementById('root'));
+
+  function Stage({ which }) {
+    const [scale, setScale] = React.useState(() => {
+      const pad = 120;
+      const maxW = (window.innerWidth - pad) / 540;
+      const maxH = (window.innerHeight - pad - 80) / 720;
+      return Math.min(maxW, maxH, 1.6);
+    });
+    React.useEffect(() => {
+      const onKey = (e) => {
+        if (e.key === '+' || e.key === '=') setScale(s => Math.min(s*1.15, 3));
+        if (e.key === '-')                   setScale(s => Math.max(s/1.15, 0.3));
+        if (e.key === '0')                   setScale(1);
+      };
+      window.addEventListener('keydown', onKey);
+      return () => window.removeEventListener('keydown', onKey);
+    }, []);
+    const Board = which === 'B' ? VariantB : VariantA;
+    const other = which === 'B' ? 'A' : 'B';
+    return (
+      <div className="stage">
+        <div className="legend">Pancarte variante {which} · 18 po × 24 po · aperçu à {Math.round(scale*100)} %</div>
+        <div className="board" style={{ transform:`scale(${scale})` }}>
+          <Board />
+        </div>
+        <div className="ctrl">
+          <button onClick={() => setScale(s => Math.max(s/1.15, 0.3))}>−</button>
+          <button onClick={() => setScale(1)}>100 %</button>
+          <button onClick={() => setScale(s => Math.min(s*1.15, 3))}>+</button>
+          <a href={`Pancarte-${other}.html`}>Voir variante {other} →</a>
+          <a href="Pancartes.html">Retour canvas</a>
+        </div>
+      </div>
+    );
+  }
+  reactRoot.render(<Stage which="A" />);
+</script>
+</body>
+</html>

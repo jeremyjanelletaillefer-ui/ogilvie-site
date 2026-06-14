@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Colors — Surfaces in use" subtitle="Paper · sand · charbon, live" viewport="700x200" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Color — Usage in context</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;background:var(--bg-paper);}
+  .card{padding:0;font-family:var(--font-body);display:grid;grid-template-columns:repeat(3,1fr);height:180px;}
+  .pane{padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between;}
+  .p1{background:var(--bg-paper);color:var(--fg-1);}
+  .p2{background:var(--sable-patine);color:var(--charbon-profond);}
+  .p3{background:#000;color:var(--sable-patine);}
+  .title{font-family:'Ibarra Real Nova',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-0.01em;font-size:30px;line-height:1.02;}
+  .meta{font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.7;}
+  .btn{display:inline-block;padding:8px 14px;border-radius:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;align-self:flex-start;}
+  .btn-corten{background:#9B6B43;color:#FDFBF6;}
+  .btn-outline{border:1px solid currentColor;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="pane p1"><div class="meta">Paper / reading</div><div class="title">Les grands<br/>espaces</div><div class="btn btn-corten">Explorer</div></div>
+  <div class="pane p2"><div class="meta">Sable / canvas</div><div class="title">Mont-Blanc<br/>Laurentides</div><div class="btn btn-outline">En savoir +</div></div>
+  <div class="pane p3"><div class="meta">Charbon / hero</div><div class="title">OGILVIE.</div><div class="btn btn-corten">Réserver</div></div>
+</div>
+</body></html>

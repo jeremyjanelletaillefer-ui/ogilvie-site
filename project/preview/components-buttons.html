@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Components — Buttons" subtitle="Corten, charbon, outline, ghost" viewport="700x140" -->
+<html lang="en"><head>
+<meta charset="utf-8" /><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;background:var(--bg-paper);}
+  .card{padding:28px;font-family:var(--font-body);display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;font-family:var(--font-body);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-radius:4px;border:1px solid transparent;cursor:pointer;transition:all 160ms cubic-bezier(.2,0,0,1);}
+  .primary{background:#9B6B43;color:#FDFBF6;}
+  .primary:hover{background:#7F5533;}
+  .secondary{background:#000;color:#D5C5A4;}
+  .secondary:hover{background:#222;}
+  .outline{background:transparent;color:#000;border-color:#000;}
+  .outline:hover{background:#000;color:#D5C5A4;}
+  .ghost{background:transparent;color:#575146;border-color:rgba(87,81,70,0.18);}
+  .sm{padding:8px 12px;font-size:10px;}
+  .lg{padding:16px 26px;font-size:12px;}
+  .disabled{opacity:.4;pointer-events:none;}
+</style></head>
+<body>
+<div class="card">
+  <button class="btn primary">Réserver une visite</button>
+  <button class="btn secondary">Voir la carte</button>
+  <button class="btn outline">Brochure</button>
+  <button class="btn ghost">Nous écrire</button>
+  <button class="btn primary sm">Petit</button>
+  <button class="btn primary lg">Grand format</button>
+  <button class="btn primary disabled">Indisponible</button>
+</div>
+</body></html>

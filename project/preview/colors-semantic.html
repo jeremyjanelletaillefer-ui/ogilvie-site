@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Colors — Semantic tokens" subtitle="fg, bg, accent, border mappings" viewport="700x220" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Color — Semantic tokens</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;background:var(--bg-paper);}
+  .card{padding:20px 28px;font-family:var(--font-body);}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px;}
+  .tok{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--border-soft);border-radius:4px;}
+  .dot{width:22px;height:22px;border-radius:3px;border:1px solid var(--border-soft);flex:none;}
+  .l{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--fg-1);}
+  .v{font-family:var(--font-mono);font-size:10px;color:var(--fg-3);}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="tok"><div class="dot" style="background:#000000"></div><div><div class="l">fg-1</div><div class="v">charbon</div></div></div>
+    <div class="tok"><div class="dot" style="background:#575146"></div><div><div class="l">fg-2</div><div class="v">forestier</div></div></div>
+    <div class="tok"><div class="dot" style="background:#8C8A73"></div><div><div class="l">fg-3</div><div class="v">sauge</div></div></div>
+    <div class="tok"><div class="dot" style="background:#D5C5A4"></div><div><div class="l">fg-inverse</div><div class="v">sable</div></div></div>
+  </div>
+  <div class="row">
+    <div class="tok"><div class="dot" style="background:#FDFBF6"></div><div><div class="l">bg-paper</div><div class="v">#FDFBF6</div></div></div>
+    <div class="tok"><div class="dot" style="background:#F3ECDF"></div><div><div class="l">bg-canvas</div><div class="v">sable/10</div></div></div>
+    <div class="tok"><div class="dot" style="background:#D5C5A4"></div><div><div class="l">bg-sand</div><div class="v">sable</div></div></div>
+    <div class="tok"><div class="dot" style="background:#000000"></div><div><div class="l">bg-ink</div><div class="v">charbon</div></div></div>
+  </div>
+  <div class="row">
+    <div class="tok"><div class="dot" style="background:#9B6B43"></div><div><div class="l">accent</div><div class="v">corten</div></div></div>
+    <div class="tok"><div class="dot" style="background:#7F5533"></div><div><div class="l">accent-press</div><div class="v">corten/-10</div></div></div>
+    <div class="tok"><div class="dot" style="background:#575146"></div><div><div class="l">bg-forest</div><div class="v">forestier</div></div></div>
+    <div class="tok"><div class="dot" style="background:rgba(87,81,70,0.18)"></div><div><div class="l">border-soft</div><div class="v">forest/18%</div></div></div>
+  </div>
+</div>
+</body></html>

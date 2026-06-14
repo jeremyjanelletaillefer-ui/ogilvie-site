@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="900" height="140">
+  
+  <text x="0" y="85" class="w" font-size="88" fill="#000000">OGILVIE.</text>
+  <text x="435" y="85" class="s" font-size="14" fill="#000000">LES GRANDS ESPACES</text>
+  <line x1="655" y1="60" x2="655" y2="80" stroke="#000000" stroke-width="1"></line>
+  <text x="670" y="85" class="s" font-size="14" fill="#000000">MONT-BLANC</text>
+</svg>

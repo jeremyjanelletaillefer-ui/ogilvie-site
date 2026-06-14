@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Brand — Imagery treatment" subtitle="Sepia Laurentian landscape with editorial caption" viewport="700x220" -->
+<html lang="en"><head>
+<meta charset="utf-8" /><title>Imagery</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;background:#FDFBF6;}
+  .card{padding:0;font-family:var(--font-body);position:relative;height:220px;overflow:hidden;background:#000;}
+  .img{position:absolute;inset:0;background:url(../assets/hero-landscape.jpg) center/cover no-repeat;filter:sepia(.15) saturate(.95) contrast(1.02);}
+  .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,0.45) 100%);}
+  .cap{position:absolute;left:20px;right:20px;bottom:16px;color:#D5C5A4;display:flex;justify-content:space-between;align-items:baseline;}
+  .t{font-family:'Ibarra Real Nova',Georgia,serif;font-style:italic;font-size:22px;letter-spacing:-.005em;}
+  .c{font-family:ui-monospace,Menlo,monospace;font-size:11px;opacity:.8;}
+</style></head>
+<body>
+<div class="card">
+  <div class="img"></div>
+  <div class="veil"></div>
+  <div class="cap"><div class="t">Les grands espaces</div><div class="c">−74.39, 46.09</div></div>
+</div>
+</body></html>

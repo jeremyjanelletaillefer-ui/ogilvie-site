@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- @dsCard group="Type" name="Type — Primary typefaces" subtitle="Archivo (Codec Pro sub) + DM Sans" viewport="700x180" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Type — Primary typefaces</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;background:var(--bg-paper);}
+  .card{padding:20px 28px;font-family:var(--font-body);display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .col h6{margin:0 0 6px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);font-weight:500;}
+  .name{font-size:14px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--fg-1);margin-bottom:10px;}
+  .abc{font-size:18px;line-height:1.15;color:var(--fg-1);}
+  .gloock{font-family:'Gloock','Ibarra Real Nova',Georgia,serif;font-weight:400;}
+  .dmsans{font-family:'DM Sans',system-ui,sans-serif;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="col">
+    <h6>Primaire · Display</h6>
+    <div class="name">Gloock Regular</div>
+    <div class="abc gloock">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+    <div class="abc gloock" style="margin-top:4px">abcdefghijklmnopqrstuvwxyz</div>
+    <div class="abc gloock" style="margin-top:4px">0123456789</div>
+  </div>
+  <div class="col">
+    <h6>Primaire · Texte</h6>
+    <div class="name dmsans">DM Sans <span style="color:var(--fg-3);font-weight:400;">(variable)</span></div>
+    <div class="abc dmsans">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+    <div class="abc dmsans" style="margin-top:4px">abcdefghijklmnopqrstuvwxyz</div>
+    <div class="abc dmsans" style="margin-top:4px">0123456789</div>
+  </div>
+</div>
+</body></html>

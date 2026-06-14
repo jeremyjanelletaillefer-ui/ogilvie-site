@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Brand — Logo variants" subtitle="Primary and reversed" viewport="700x200" -->
+<html lang="en"><head>
+<meta charset="utf-8" /><title>Logo — variants</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  html,body{margin:0;background:var(--bg-paper);}
+  .card{padding:0;font-family:var(--font-body);display:grid;grid-template-columns:1fr 1fr;height:200px;}
+  .pane{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;}
+  .light{background:#FDFBF6;}
+  .dark{background:#000;}
+  .logo{width:260px;height:auto;display:block;}
+  .dark .logo{filter:invert(1);}
+  .meta{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  .dark .meta{color:#D5C5A4;}
+</style></head>
+<body>
+<div class="card">
+  <div class="pane light"><img class="logo" src="../assets/logo-ogilvie-plain.png" alt="OGILVIE." /><div class="meta">Logo primaire</div></div>
+  <div class="pane dark"><img class="logo" src="../assets/logo-ogilvie-plain.png" alt="OGILVIE." /><div class="meta">Logo renversé</div></div>
+</div>
+</body></html>
