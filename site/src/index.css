@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@1&family=Playfair+Display:ital@1&display=swap');
+
+@font-face {
+  font-family: 'Gloock';
+  src: url('./assets/fonts/Gloock-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations');
+  font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --charbon-profond:   #000000;
+  --sable-patine:      #D5C5A4;
+  --corten:            #9B6B43;
+  --sauge-collines:    #8C8A73;
+  --gris-forestier:    #575146;
+
+  --sable-tint-10:     #F3ECDF;
+  --sable-tint-30:     #E7DAC2;
+  --sable-shade-10:    #BFAE8C;
+  --corten-shade-10:   #7F5533;
+
+  --fg-1:              var(--charbon-profond);
+  --fg-2:              var(--gris-forestier);
+  --fg-3:              var(--sauge-collines);
+  --fg-inverse:        var(--sable-patine);
+
+  --bg-paper:          #FDFBF6;
+  --bg-canvas:         var(--sable-tint-10);
+  --bg-sand:           var(--sable-patine);
+  --bg-ink:            var(--charbon-profond);
+  --bg-forest:         var(--gris-forestier);
+
+  --accent:            var(--corten);
+  --accent-press:      var(--corten-shade-10);
+
+  --font-display:      "Gloock", "Ibarra Real Nova", Georgia, serif;
+  --font-body:         "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif-italic: "Ibarra Real Nova", "Playfair Display", Georgia, serif;
+  --font-mono:         ui-monospace, "SF Mono", Menlo, monospace;
+
+  --tracking-tight:   -0.02em;
+  --tracking-eyebrow: 0.18em;
+
+  --lh-display:  0.95;
+  --lh-body:     1.55;
+
+  --ease-standard: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  --dur-quick:     160ms;
+  --dur-base:      260ms;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--lh-body);
+  color: var(--fg-1);
+  background: var(--bg-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity var(--dur-quick) var(--ease-standard);
+}
+a:hover { opacity: 0.6; }
