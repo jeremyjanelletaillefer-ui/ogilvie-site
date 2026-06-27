@@ -3,7 +3,7 @@ import './index.css'
 
 import { TopBar } from './components/TopBar'
 import { Footer } from './components/Footer'
-import { Hero, StatsStrip, Manifest, EditorialCut, ContactStrip } from './components/Hero'
+import { Hero, StatsStrip, Manifest, EditorialCut, PhotoTextSection, ContactStrip } from './components/Hero'
 import { ParcelGrid } from './components/ParcelGrid'
 import { MapSection } from './components/MapSection'
 import { ParcelDetail } from './components/ParcelDetail'
@@ -31,9 +31,9 @@ export default function App() {
       {route === 'accueil' && (
         <>
           <Hero onNav={nav} />
-          <StatsStrip />
           <Manifest />
           <EditorialCut />
+          <PhotoTextSection />
           <ContactStrip onOpenContact={() => setContactOpen(true)} />
         </>
       )}
