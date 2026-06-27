@@ -4,7 +4,7 @@ import { Button, Eyebrow } from './Primitives'
 // Pour utiliser votre photo : remplacez la ligne ci-dessous par
 // import sectionPhoto from '../assets/maison-noire.jpg'
 // et passez-la à <PhotoTextSection photo={sectionPhoto} />
-import sectionPhoto from '../assets/hero-landscape.jpg'
+import sectionPhoto from '../assets/DKA.png'
 
 function YoutubeLoop({ videoId, start, end }) {
   const containerRef = useRef(null)
